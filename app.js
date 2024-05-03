@@ -1,9 +1,10 @@
-const http= require('http')
-const server =http.createServer((req,res)=>{
+const {createReadStream}=require('fs')
+const stream= createReadStream('../content/big.txt')
+stream.on('data',(result)=>{
 
-  res.write('<h1>i am achapi</h1>')
-
-
-  res.end('\nbye bye')
+  console.log(result)
 })
-server.listen(1000)
+stream.on('error',(err)=>{
+  res.end(err)
+
+})

@@ -1,13 +1,16 @@
 {
   "dependencies": {
-    "lodash": "^4.17.21"
+    "express": "^4.19.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.3.0",
+    "nodemon": "^3.1.0"
   },
   "name": "node",
   "version": "1.0.0",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
